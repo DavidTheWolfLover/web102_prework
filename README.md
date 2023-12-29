@@ -25,7 +25,7 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented features:
 
-<a href="//imgur.com/a/lppnFXf">WEB102 DEMO - Khoa Cao</a>
+<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWo0Z2Uyc25rM28zcWpxZjJjd2RxZm9kZmVleGt5aXowbmpkcml5YSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/FfacpaGvlXFOx8kQBB/giphy.gif">
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ScreenToGif  
 <!-- Recommended tools:
