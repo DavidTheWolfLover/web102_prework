@@ -187,3 +187,21 @@ firstGameContainer.append(firstGameElement);
 const secondGameElement = document.createElement("p");
 secondGameElement.innerHTML = secondGame.name;
 secondGameContainer.append(secondGameElement);
+
+/************************************************************************************
+ * Additional feature: Search for a specific game they have heard of
+ */
+const searchInput = document.getElementById("game-search")
+searchInput.addEventListener("keyup", findGame)
+function findGame(){
+    let keyword = searchInput.value.toLowerCase()
+    deleteChildElements(gamesContainer);
+
+    // use filter() to get a list of games that got keyword in its name
+    //Empty = all game
+    let filterGames = GAMES_JSON.filter(game => {
+        return game["name"].toLowerCase().includes(keyword)
+    })
+
+    addGamesToPage(filterGames)
+}
