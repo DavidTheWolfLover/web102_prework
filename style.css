@@ -26,10 +26,13 @@ body {
 .stats-container {
     display: flex;
     align-items: center;
+    transition: font-size 0.5s, box-shadow 0.5s, color 0.5s;
 }
 
 .stats-container:hover {
     cursor: pointer;
+    font-size: 150%;
+    color: yellow;
     box-shadow: 0 0 30px lightblue;
 }
 
@@ -84,6 +87,12 @@ button {
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+button:hover {
+    transform: scale(1.25);
+    box-shadow: 0 0 15px black;
 }
 
 #search-container {

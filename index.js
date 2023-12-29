@@ -93,18 +93,19 @@ gamesCard.innerHTML = `${totalGames}`
  * total number of contributions, amount donated, and number of games on the site.
  * Skills used: functions, filter
 */
+let filteredGame = GAMES_JSON
 
 // show only games that do not yet have enough funding
 function filterUnfundedOnly() {
     deleteChildElements(gamesContainer);
 
     // use filter() to get a list of games that have not yet met their goal
-    let notMetGames = GAMES_JSON.filter(game => {
+    filteredGame = GAMES_JSON.filter(game => {
         return game["pledged"] < game["goal"]
     })
 
     // use the function we previously created to add the unfunded games to the DOM
-    addGamesToPage(notMetGames)
+    addGamesToPage(filteredGame)
 }
 
 // show only games that are fully funded
@@ -112,20 +113,20 @@ function filterFundedOnly() {
     deleteChildElements(gamesContainer);
 
     // use filter() to get a list of games that have met or exceeded their goal
-    let metGames = GAMES_JSON.filter(game => {
+    filteredGame = GAMES_JSON.filter(game => {
         return game["pledged"] >= game["goal"]
     })
 
     // use the function we previously created to add unfunded games to the DOM
-    addGamesToPage(metGames)
+    addGamesToPage(filteredGame)
 }
 
 // show all games
 function showAllGames() {
     deleteChildElements(gamesContainer);
-
+    filteredGame = GAMES_JSON
     // add all games from the JSON data to the DOM
-    addGamesToPage(GAMES_JSON)
+    addGamesToPage(filteredGame)
 }
 
 // select each button in the "Our Games" section
@@ -199,7 +200,7 @@ function findGame(){
 
     // use filter() to get a list of games that got keyword in its name
     //Empty = all game
-    let filterGames = GAMES_JSON.filter(game => {
+    let filterGames = filteredGame.filter(game => {
         return game["name"].toLowerCase().includes(keyword)
     })
 
